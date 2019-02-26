@@ -21,5 +21,11 @@
 ![activity1_expected](assets/activity1_expected.png)
 
 
-#### Animation:
+#### Animated version:
 ![activity1_animation](assets/activity1_animation.gif)
+
+#### Animated version1:
+![activity1_animation](assets/giphy.gif)
+
+#### Animated version2:
+![activity1_animation](assets/ezgif.gif)
