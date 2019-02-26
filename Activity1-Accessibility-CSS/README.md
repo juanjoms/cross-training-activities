@@ -13,7 +13,7 @@
   - Page should match the given design.
   - Cards should the specified animation.
 
-- Use [Unsplash](https://unsplash.com/) for image source
+- Use [Unsplash](https://unsplash.com/) for image source.
 
 
 
