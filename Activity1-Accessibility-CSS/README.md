@@ -18,4 +18,8 @@
 
 
 #### Expected result:
-![activity1_expected](activity1_expected.png)
+![activity1_expected](assets/activity1_expected.png)
+
+
+#### Animation:
+![activity1_animation](assets/activity1_animation.gif)
