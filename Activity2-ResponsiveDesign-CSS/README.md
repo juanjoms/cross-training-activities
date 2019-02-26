@@ -1,11 +1,9 @@
-# Activity 1: Accessibility-CSS
+# Activity 2: Responsive Design - CSS
 
-- Fork the following project <https://github.com/juanjoms/cross-training-activities/>
-- Review the code and implement the best practices for accessibility that you consider are important, such as:
-  - point 1
+- Reuse the code generated in [Activity 1](../Activity1-Accessibility-CSS)
 
+- Change your CSS code to use Sass best practices.
+- Make the site responsive, considering the following:
+  - Code should be clean and structured: all desktop styles first and then a single media queries for a specific responsive view.
+  - Page should match the given design for Tablet and Mobile.  
 
-
-Expected result:
-
-![activity1_expected](activity1_expected.png)
