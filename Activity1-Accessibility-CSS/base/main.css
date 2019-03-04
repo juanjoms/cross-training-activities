@@ -5,8 +5,8 @@ body {
 
 .moto {
   margin-top: 10px;
-  color: brown;
-  font-size: 10px;
+  color: rgb(255, 137, 1);
+  font-size: 13px;
 }
 
 .main-header {
@@ -24,11 +24,11 @@ body {
 }
 
 .card-container::-webkit-scrollbar {
-  width: 0.5em;
+  width: 0.3em;
 }
 
 .card-container::-webkit-scrollbar-thumb {
-  background-color: rgb(175, 175, 175);
+  background-color: rgb(151, 151, 151);
 }
 
 .cards {
