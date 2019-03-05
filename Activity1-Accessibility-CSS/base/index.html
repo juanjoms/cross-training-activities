@@ -65,28 +65,37 @@
             </div>
         </div>
         <br>
-        <div style="display:none;">
-          <form action="">
-            <div>
-              <label for="">Title</label>
-              <input type="text" id="">
-            </div>
-            <div>
-              <label for="">Description</label>
-              <textarea type="text" id=""></textarea>
-            </div>
-            <div>
-              <label for="">Type</label>
-              <select id="">
-                <option value="LIFESTYLE">LIFESTYLE</option>
-                <option value="TRAVEL">TRAVEL</option>
-              </select>
-            </div>
-            <div>
-              <label for="">Date</label>
-              <input type="date">
-            </div>
-          </form>
+        <div>
+          <h3 class="main-header">Make A Post</h3>
+          <div class="input-container">
+            <form action="">
+              <div class="wrap" >
+                <label for="title-input" class="inp">
+                  <input type="text" id="title-input" placeholder="&nbsp;">
+                  <span id="title-label">Title</span>
+                  <hr id="border"/>
+                </label>
+              </div>
+              <div class="wrap">
+                <label for="dscr-box" class="dsc">
+                  <textarea type="text" id="dscr-box" placeholder="&nbsp;"></textarea>
+                  <span id="dscr-label">Description</span>
+                </label>
+              </div>
+              <div class="wrap">
+                <span id="arrow-png"></span>
+                <select id="type-selector">
+                  <option value selected>Type</option>
+                  <option value="LIFESTYLE">LIFESTYLE</option>
+                  <option value="TRAVEL">TRAVEL</option>
+                </select>
+              </div>
+              <div class="wrap">
+                <label for="date-entry">Date</label>
+                <input type="date" id="date-entry">
+              </div>
+            </form>
+          </div>
         </div>
     </body>
 </html>

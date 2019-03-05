@@ -21,10 +21,12 @@ body {
   margin: auto;
   margin-top: 20px;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .card-container::-webkit-scrollbar {
   width: 0.3em;
+  height: 3px;
 }
 
 .card-container::-webkit-scrollbar-thumb {
@@ -97,7 +99,7 @@ body {
   /* background-color: whitesmoke; */
   /* height:10px; */
   width: 80px;
-  /* margin-bottom: 5px; */
+  margin-bottom: 5px;
   /* transition: all 1s ease-in-out; */
 }
 
@@ -136,3 +138,136 @@ body {
   margin: auto;
   text-align: right
 }
+
+
+/* form style */
+
+
+
+.input-container {
+  width: 1100px;
+  height: 450px;
+  margin: auto;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.wrap {
+  margin-bottom: 50px;
+}
+
+label {
+  text-align: left;
+  margin: auto;
+  font-size: 25px;
+  color: rgb(136, 136, 136);
+  font-weight: 500;
+  display: block;
+  width: 300px;
+  line-height: 24px;
+}
+
+.inp * {
+  display:inline-block;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+#title-input {
+  background-color: transparent;
+  font-size: 20px;
+  width: 300px;
+  height: 30px;
+  border: 0px;
+  transition: all 200ms;
+  transform-origin: 0 0;
+}
+
+#title-label {
+  transition: all 300ms;
+  transform-origin: 0 0;
+}
+
+#border {
+  border-bottom: solid grey 2px;
+  top: 10px;
+  width: 300px;
+  margin-top: 2px;
+  transition: all 300ms ease-in-out;
+  transform-origin: 0 0;
+}
+
+.inp input {
+  position: absolute;
+}
+
+.inp input:not(:placeholder-shown) + span {
+  transform: translateY(-26px) scale(.75);
+  color: rgb(255, 137, 1)
+}
+.inp input:focus {
+  outline:none;
+} 
+.inp input:focus + #title-label {
+  transform: translateY(-26px) scale(.75);
+} 
+
+.inp input:focus + span + #border {
+  outline:none;
+  transform: scaleX(1.1) ;
+  border-bottom: solid black 2px;
+} 
+
+
+/* description */
+
+
+.dsc  * {
+  display:inline-block;
+  box-sizing: border-box;
+  height: 150px
+}
+
+#dscr-box {
+  padding: 15px;
+  position: absolute;
+  outline: none;
+  background-color: transparent;
+  font-size: 15px;
+  width: 300px;
+  height: 150px;
+  border: 0px;
+  overflow: auto;
+  resize: none;
+  transition: all 200ms;
+  transform-origin: 0 0;
+  z-index: -1;
+}
+
+#dscr-label {
+  transition: all 300ms;
+  transform-origin: 0 0;
+}
+
+.dsc #dscr-box:focus {
+  background-color: antiquewhite;
+  box-shadow: yellow;
+}
+
+.dsc textarea:not(:placeholder-shown) + span {
+  transform: translateY(-26px) scale(.75);
+  color: rgb(255, 137, 1)
+}
+
+.dsc textarea:focus + #dscr-label {
+  transform: translateY(-26px) scale(.75);
+}
+
+
+
+#arrow-png {
+  background-image: url("../assets/iconfinder_basics-08_296826.png")
+}
+
+
+
