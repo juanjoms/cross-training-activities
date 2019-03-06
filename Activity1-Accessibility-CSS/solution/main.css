@@ -18,11 +18,13 @@ body {
 }
 
 .card-container {
-  width: 1100px;
-  height: 450px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   margin: auto;
   margin-top: 20px;
-  overflow-y: scroll;
+  margin-bottom: 40px;
+  /* overflow-y: scroll; */
   scroll-behavior: smooth;
 }
 
@@ -39,47 +41,57 @@ body {
   text-align: left;
   background-color: aqua;
   width: 50%;
-  height: 300px;
+  height: 360px;
   box-sizing: border-box;
   padding-left: 22px;
   padding-right: 22px;
   padding-top: 10px;
   float: left;
   color: whitesmoke;
+  transition: all 200ms ease-in-out;
+  overflow-y: hidden
 }
 
 #card1 {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1461503312594-019be44dd599?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
   background-size: cover;
+  background-position: center;
 }
 #card2 {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1476673160081-cf065607f449?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80');
   background-size: cover;
+  background-position: center;
 }
 #card3 {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1533939664942-173b7df71238?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80');
   background-size: cover;
+  background-position: center;
 }
 #card4 {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1416431168657-a6c4184348ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
+  background-position: center;
 }
 
 #card1:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1461503312594-019be44dd599?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
   background-size: cover;
+  background-position: center;
 }
 #card2:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1476673160081-cf065607f449?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80');
   background-size: cover;
+  background-position: center;
 }
 #card3:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1533939664942-173b7df71238?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80');
   background-size: cover;
+  background-position: center;
 }
 #card4:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1416431168657-a6c4184348ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
+  background-position: center;
 }
 
 .post-title {
@@ -141,18 +153,74 @@ body {
 
 
 .input-container {
-  width: 1100px;
+  text-align: center;
   height: 450px;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 30px;
+  display: inline-block;
+  transition: all 200ms ease-in-out;
+}
+
+.input-container .hide-label {
+  font-size: 40px;
+  height: 50px;
+  width: 250px;
   text-align: center;
+  /* box-sizing: border-box; */
+}
+.input-container .label {
+  font-size: 40px;
+  height: 50px;
+  width: 80%;
+  /* box-sizing: border-box; */
+}
+
+.input-container #form-hide {
+  display: none;
+}
+
+
+.hide {
+  margin: auto;
+  position: relative;
+  top: -30px;
+  box-sizing: border-box;
+}
+
+.input-container .main-header {
+  position: relative;
+  width: 250px;
+  top: -55px;
+  transition: all 200ms ease-in-out;
+  color: rgb(136, 136, 136);
+  margin-bottom: 50px;
+  z-index: -1;
+  box-sizing: border-box;
+}
+
+.input-container .hide-label:hover ~ .main-header {
+  /* color: black; */
+  margin-bottom: 50px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  transition: all 200ms ease-in-out;
+}
+
+.input-container input[type="checkbox"]:not(:checked) ~ .hide {
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.input-container input[type="checkbox"]:checked ~ .main-header {
+  color: black;
+  transition: all 200ms ease-in-out;
+  border: 2px solid black;
 }
 
 .wrap {
   margin-bottom: 50px;
 }
 
-label {
+.hide label {
   text-align: left;
   margin: auto;
   font-size: 25px;
@@ -161,7 +229,8 @@ label {
   display: block;
   width: 300px;
   height: 90px;
-  line-height: 24px;
+  line-height: 5px;
+  transition: all 200ms ease-in-out;
 }
 
 .title * {
@@ -172,11 +241,15 @@ label {
 
 .title input {
   position: absolute;
+  padding: 2px;
 }
 
-.title input:not(:placeholder-shown) + span {
+.title input:not(:placeholder-shown) + #title-label {
   transform: translateY(-26px) scale(.75);
   color: rgb(255, 137, 1)
+}
+.title input:not(:placeholder-shown) + #title-label + #border-title {
+  transform: translateY(10px);
 }
 .title input:focus {
   outline:none;
@@ -185,10 +258,10 @@ label {
   transform: translateY(-26px) scale(.75);
 } 
 
-.title input:focus + span + #border {
+.title input:focus + #title-label + #border-title {
   outline:none;
-  transform: scaleX(1.1) ;
-  border-bottom: solid black 2px;
+  transform: translateY(10px) ;
+  border-bottom-color: black;
 } 
 
 #title-input {
@@ -273,8 +346,7 @@ label {
   color: rgb(255, 137, 1)
 }
 .dsc textarea:not(:placeholder-shown) + #dscr-label + #border-dscr {
-  color: black;
-  transform: translateY(58px);
+  transform: translateY(65px);
 }
 
 .dsc textarea:focus + #dscr-label {
@@ -282,7 +354,7 @@ label {
 }
 .dsc textarea:focus + #dscr-label + #border-dscr {
   border-color: black;
-  transform: translateY(58px);
+  transform: translateY(65px);
 }
 
 

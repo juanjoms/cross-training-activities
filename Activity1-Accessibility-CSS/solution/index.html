@@ -65,10 +65,16 @@
             </div>
         </div>
         <br>
-        <div>
+        <div class="input-container">
+          <div class="hide-label">
+            <label for="form-hide">
+              <div class="label"></div>
+            </label>
+          </div>
+          <input type="checkbox" name="form-hide" id="form-hide">
           <h3 class="main-header">Make A Post</h3>
-          <div class="input-container">
-            <form action="">
+          <div class="hide">
+            <form action="" autocomplete="off">
               <div class="wrap" >
                 <label for="title-input" class="title">
                   <input type="text" id="title-input" placeholder="&nbsp;">
@@ -78,7 +84,7 @@
               </div>
               <div class="wrap">
                 <label for="dscr-box" class="dsc">
-                  <textarea type="text" id="dscr-box" placeholder="&nbsp;"></textarea>
+                  <textarea id="dscr-box" placeholder="&nbsp;"></textarea>
                   <span id="dscr-label">Description</span>
                   <hr id="border-dscr"/>
                 </label>
@@ -94,6 +100,7 @@
                 <input type="submit" class="submit">
               </div>
             </form>
+          </div>
           </div>
         </div>
     </body>
