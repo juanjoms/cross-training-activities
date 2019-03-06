@@ -269,5 +269,27 @@ label {
   background-image: url("../assets/iconfinder_basics-08_296826.png")
 }
 
+.submit {
+	justify-content: center;
+	border: 1px solid white;
+	padding: 10px;
+	width: 100px;
+	color: white;
+	background-color: rgb(255, 137, 1);
+	border-radius: 8px;
+	transition: 100ms ease all;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 1px 4px 4px rgb(255, 185, 105)
+}
+
+.submit:hover {
+  background-color: rgb(230, 122, 0)
+}
+
+.submit:active {
+  box-shadow: 0 1px rgb(255, 148, 26);
+  transform: translateY(4px) translateX(2px);
+}
 
 
