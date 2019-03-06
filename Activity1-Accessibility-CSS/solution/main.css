@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Roboto;
 }
 
 .moto {
@@ -85,7 +85,6 @@ body {
   font-size: 26px;
   box-sizing: border-box;
   margin-bottom: 5px;
-  /* margin-top: auto; */
 }
 
 .ani-bar {
@@ -96,18 +95,13 @@ body {
   transition: all .3s ease-in-out;
 }
 .cards:hover .ani-bar {
-  /* background-color: whitesmoke; */
-  /* height:10px; */
   width: 80px;
   margin-bottom: 5px;
-  /* transition: all 1s ease-in-out; */
 }
 
 .post-content {
   padding-right: 21%;
   font-size: 12px;
-  /* position: relative; */
-  /* margin-top: 10px */
 }
 
 
@@ -164,122 +158,165 @@ label {
   font-weight: 500;
   display: block;
   width: 300px;
+  height: 90px;
   line-height: 24px;
 }
 
-.inp * {
+.title * {
   display:inline-block;
   box-sizing: border-box;
   margin: auto;
 }
 
-#title-input {
-  background-color: transparent;
-  font-size: 20px;
-  width: 300px;
-  height: 30px;
-  border: 0px;
-  transition: all 200ms;
-  transform-origin: 0 0;
-  z-index: -1
-}
-
-#title-label {
-  transition: all 300ms;
-  transform-origin: 0 0;
-}
-#title-label:hover {
-  color: rgb(255, 137, 1)
-}
-
-#border {
-  border-bottom: solid grey 2px;
-  top: 10px;
-  width: 300px;
-  margin-top: 2px;
-  transition: all 300ms ease-in-out;
-  transform-origin: 0 0;
-}
-
-.inp input {
+.title input {
   position: absolute;
 }
 
-.inp input:not(:placeholder-shown) + span {
+.title input:not(:placeholder-shown) + span {
   transform: translateY(-26px) scale(.75);
   color: rgb(255, 137, 1)
 }
-.inp input:focus {
+.title input:focus {
   outline:none;
 } 
-.inp input:focus + #title-label {
+.title input:focus + #title-label {
   transform: translateY(-26px) scale(.75);
 } 
 
-.inp input:focus + span + #border {
+.title input:focus + span + #border {
   outline:none;
   transform: scaleX(1.1) ;
   border-bottom: solid black 2px;
 } 
 
+#title-input {
+  background-color: transparent;
+  font-size: 25px;
+  width: 300px;
+  height: 30px;
+  border: 0px;
+  transition: all 200ms ease-in-out;
+  transform-origin: 0 0;
+  z-index: 1
+}
+#title-input:hover + #title-label {
+  color: rgb(255, 137, 1)
+}
+
+#title-label {
+  transition: all 200ms;
+  transform-origin: 0 0;
+}
+
+#border-title {
+  position: relative;
+  border-bottom: solid grey 2px;
+  top: 10px;
+  width: 300px;
+  margin-top: 2px;
+  transition: all 200ms ease-in-out;
+  transform-origin: 0 0;
+}
+
 
 /* description */
+
 
 
 .dsc  * {
   display:inline-block;
   box-sizing: border-box;
-  height: 150px
+}
+.dsc:hover {
+  color:rgb(255, 137, 1);
 }
 
 #dscr-box {
+  font-family: inherit;
   padding: 2px;
   position: absolute;
   outline: none;
   background-color: transparent;
-  font-size: 15px;
+  font-size: 20px;
   width: 300px;
-  height: 150px;
+  height: 90px;
   border: 0px;
-  overflow: auto;
   resize: none;
-  transition: all 200ms;
+  overflow-y: hidden;
+  transition: all 200ms ease-in-out;
   transform-origin: 0 0;
   z-index: -1;
 }
 
 #dscr-label {
-  transition: all 300ms;
+  transition: all 200ms;
   transform-origin: 0 0;
 }
 
-#dscr-label:hover {
-  color: rgb(255, 137, 1)
+
+#border-dscr {
+  position: relative;
+  border-bottom: solid grey 2px;
+  top: 20px;
+  width: 300px;
+  margin-top: 2px;
+  transition: all 200ms ease-in-out;
+  transform-origin: 0 0;
+  outline:none;
 }
 
-.dsc #dscr-box:focus {
-  background-color: antiquewhite;
-  box-shadow: yellow;
-}
 
-.dsc textarea:not(:placeholder-shown) + span {
+.dsc textarea:not(:placeholder-shown) + #dscr-label {
   transform: translateY(-26px) scale(.75);
   color: rgb(255, 137, 1)
+}
+.dsc textarea:not(:placeholder-shown) + #dscr-label + #border-dscr {
+  color: black;
+  transform: translateY(58px);
 }
 
 .dsc textarea:focus + #dscr-label {
   transform: translateY(-26px) scale(.75);
 }
-
-
-
-#arrow-png {
-  background-image: url("../assets/iconfinder_basics-08_296826.png")
+.dsc textarea:focus + #dscr-label + #border-dscr {
+  border-color: black;
+  transform: translateY(58px);
 }
+
+
+/* dropdown */
+
+.input-dropdown {
+  color: rgb(136, 136, 136);
+  font-weight: bold;
+  background: none;
+  padding-left: 5px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  width: 300px;
+  outline: none; 
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgb(136, 136, 136);
+  transition: all 200ms ease-in-out;
+  border: none;
+  border-bottom: 2px solid rgb(136, 136, 136);
+  border-radius: 0;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right transparent;
+  -webkit-appearance: none;
+}
+
+.input-dropdown:hover {
+  color:rgb(255, 137, 1);
+}
+
+/* submit button */
+
 
 .submit {
 	justify-content: center;
-	border: 1px solid white;
+	border: none;
 	padding: 10px;
 	width: 100px;
 	color: white;
@@ -296,7 +333,7 @@ label {
 }
 
 .submit:active {
-  box-shadow: 0 1px rgb(255, 148, 26);
+  box-shadow: 0 1px rgb(223, 101, 1);
   transform: translateY(4px) translateX(2px);
 }
 
