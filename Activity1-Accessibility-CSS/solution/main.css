@@ -181,11 +181,15 @@ label {
   border: 0px;
   transition: all 200ms;
   transform-origin: 0 0;
+  z-index: -1
 }
 
 #title-label {
   transition: all 300ms;
   transform-origin: 0 0;
+}
+#title-label:hover {
+  color: rgb(255, 137, 1)
 }
 
 #border {
@@ -229,7 +233,7 @@ label {
 }
 
 #dscr-box {
-  padding: 15px;
+  padding: 2px;
   position: absolute;
   outline: none;
   background-color: transparent;
@@ -247,6 +251,10 @@ label {
 #dscr-label {
   transition: all 300ms;
   transform-origin: 0 0;
+}
+
+#dscr-label:hover {
+  color: rgb(255, 137, 1)
 }
 
 .dsc #dscr-box:focus {
